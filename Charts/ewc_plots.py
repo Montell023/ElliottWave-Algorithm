@@ -1,0 +1,46 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import find_peaks
+
+# Load data from CSV file
+data = pd.read_csv('BTC-USD_1minute_data.csv', parse_dates=True, index_col=0)
+
+# Select last day's worth of data (1440 data points for 1-minute intervals)
+data_last_day = data.tail(1440)  # 1440 minutes in a day
+
+# Input parameters
+length = 20
+mult = 2.0
+
+# Calculate mean and standard deviation
+mean_price = data_last_day['Close'].rolling(window=length).mean()
+std_price = data_last_day['Close'].rolling(window=length).std()
+
+# Identify points where the price reverts to the mean
+data_last_day['AboveMean'] = np.where(data_last_day['Close'] > mean_price + mult * std_price, data_last_day['Close'], np.nan)
+data_last_day['BelowMean'] = np.where(data_last_day['Close'] < mean_price - mult * std_price, data_last_day['Close'], np.nan)
+
+# Identify peaks and valleys
+peaks, _ = find_peaks(data_last_day['Close'], prominence=0.1)  # Adjust prominence threshold as needed
+valleys, _ = find_peaks(-data_last_day['Close'], prominence=0.1)  # Adjust prominence threshold as needed
+
+# Plotting
+plt.figure(figsize=(15, 7))
+plt.plot(data_last_day.index, data_last_day['Close'], label='Close Price', color='blue')
+plt.plot(mean_price.index, mean_price, label='Mean', color='red')
+plt.plot(mean_price.index, mean_price + mult * std_price, label='Upper Band', color='green', linestyle='--')
+plt.plot(mean_price.index, mean_price - mult * std_price, label='Lower Band', color='green', linestyle='--')
+plt.scatter(data_last_day.index, data_last_day['AboveMean'], color='black', marker='o', label='Above Mean')
+plt.scatter(data_last_day.index, data_last_day['BelowMean'], color='black', marker='o', label='Below Mean')
+
+# Plot peaks and valleys
+plt.scatter(data_last_day.index[peaks], data_last_day['Close'][peaks], color='red', marker='^', label='Peaks')
+plt.scatter(data_last_day.index[valleys], data_last_day['Close'][valleys], color='green', marker='v', label='Valleys')
+
+plt.title('BTC/USD Close Price with Mean, Standard Deviation Bands, Peaks, and Valleys (Last Day)')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.grid(True)
+plt.show()

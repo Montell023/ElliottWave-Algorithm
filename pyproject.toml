@@ -1,0 +1,31 @@
+# pyproject.toml
+
+# This section defines your project for installers like pip
+[project]
+name = "algostack"
+version = "0.1.0"
+description = "An algorithmic trading library for Elliott Wave analysis."
+dependencies = [
+    "pandas",
+    "numpy",
+    "scipy",
+    "lumibot",  # Your backtesting framework library
+]
+
+# This tells pip which tool to use to build your project
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+# This helps the build tool find your packages inside the 'src' directory
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# This section configures the Pyre type checker
+[tool.pyrefly]
+source_directories = [
+    "src/algostack",
+    "scripts",
+    "tests",
+]
+
