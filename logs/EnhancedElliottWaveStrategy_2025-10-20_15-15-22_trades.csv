@@ -1,0 +1,19 @@
+time,strategy,identifier,symbol,side,type,status,multiplier,time_in_force,asset.strike,asset.multiplier,asset.asset_type,price,filled_quantity,trade_cost
+2024-07-11 09:30:00-04:00,EnhancedElliottWaveStrategy,d4ec361166ca45a088eb45f41509e828,BTC-USD,sell,market,new,1,gtc,0.0,1,crypto,,,
+2024-07-11 09:30:00-04:00,EnhancedElliottWaveStrategy,d4ec361166ca45a088eb45f41509e828,BTC-USD,sell,market,fill,1,gtc,0.0,1,crypto,58786.14453125,0.01701081110138822,0.0
+2024-07-11 10:12:00-04:00,EnhancedElliottWaveStrategy,c2f26408afc040f1879ff14930e66bc8,BTC-USD,buy,market,new,1,gtc,0.0,1,crypto,,,
+2024-07-11 10:12:00-04:00,EnhancedElliottWaveStrategy,c2f26408afc040f1879ff14930e66bc8,BTC-USD,buy,market,fill,1,gtc,0.0,1,crypto,58471.55078125,0.017103249371973776,0.0
+2024-07-11 10:42:00-04:00,EnhancedElliottWaveStrategy,78398e064b21472eb36317eb3827265d,BTC-USD,sell,market,new,1,gtc,0.0,1,crypto,,,
+2024-07-11 10:42:00-04:00,EnhancedElliottWaveStrategy,78398e064b21472eb36317eb3827265d,BTC-USD,sell,market,fill,1,gtc,0.0,1,crypto,57931.05859375,0.017103249371973776,0.0
+2024-07-11 12:13:00-04:00,EnhancedElliottWaveStrategy,0814f0d60a5344428e3c5cd7d5c9ad95,BTC-USD,sell,market,new,1,gtc,0.0,1,crypto,,,
+2024-07-11 12:13:00-04:00,EnhancedElliottWaveStrategy,0814f0d60a5344428e3c5cd7d5c9ad95,BTC-USD,sell,market,fill,1,gtc,0.0,1,crypto,57472.52734375,0.01740189723749446,0.0
+2024-07-15 09:40:00-04:00,EnhancedElliottWaveStrategy,680340d7998242a4ac7be9635c5c7886,BTC-USD,buy,market,new,1,gtc,0.0,1,crypto,,,
+2024-07-15 09:40:00-04:00,EnhancedElliottWaveStrategy,680340d7998242a4ac7be9635c5c7886,BTC-USD,buy,market,fill,1,gtc,0.0,1,crypto,62727.2265625,0.015915301626899216,0.0
+2024-07-15 10:10:00-04:00,EnhancedElliottWaveStrategy,07a8716830dd4a3db008e4318911372c,BTC-USD,sell,market,new,1,gtc,0.0,1,crypto,,,
+2024-07-15 10:10:00-04:00,EnhancedElliottWaveStrategy,07a8716830dd4a3db008e4318911372c,BTC-USD,sell,market,fill,1,gtc,0.0,1,crypto,62991.87890625,0.015847658363695824,0.0
+2024-07-15 13:37:00-04:00,EnhancedElliottWaveStrategy,d02d3ba1e7064c3680351f5064a07d82,BTC-USD,sell,market,new,1,gtc,0.0,1,crypto,,,
+2024-07-15 13:37:00-04:00,EnhancedElliottWaveStrategy,d02d3ba1e7064c3680351f5064a07d82,BTC-USD,sell,market,fill,1,gtc,0.0,1,crypto,63446.625,6.764326320339228e-05,0.0
+2024-07-16 11:14:00-04:00,EnhancedElliottWaveStrategy,a495d240272341cda4944cc9d5361e86,BTC-USD,buy,market,new,1,gtc,0.0,1,crypto,,,
+2024-07-16 11:14:00-04:00,EnhancedElliottWaveStrategy,a495d240272341cda4944cc9d5361e86,BTC-USD,buy,market,fill,1,gtc,0.0,1,crypto,64284.69921875,0.01552203249002791,0.0
+2024-07-16 11:44:00-04:00,EnhancedElliottWaveStrategy,8814ca38be784462b6e698fba7aea36e,BTC-USD,sell,market,new,1,gtc,0.0,1,crypto,,,
+2024-07-16 11:44:00-04:00,EnhancedElliottWaveStrategy,8814ca38be784462b6e698fba7aea36e,BTC-USD,sell,market,fill,1,gtc,0.0,1,crypto,64663.91015625,0.015429898251496632,0.0
